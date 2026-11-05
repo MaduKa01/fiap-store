@@ -1,0 +1,50 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: store-api-config
+  namespace: store-prod
+  annotations:
+    argocd.argoproj.io/sync-wave: "-20"
+data:
+  DB_HOST: store-db.store-data.svc.cluster.local
+  DB_PORT: '5432'
+  DB_NAME: fiapstore
+  DB_USER: fiapstore
+  REDIS_HOST: store-redis.store-data.svc.cluster.local
+  REDIS_PORT: '6379'
+  QUEUE_NAME: pedidos
+  APP_ENV: producao
+  PROCESS_SECONDS: '2'
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: store-budget
+  namespace: store-prod
+  annotations:
+    argocd.argoproj.io/sync-wave: "-20"
+spec:
+  hard:
+    requests.cpu: '6'
+    requests.memory: 6Gi
+    limits.cpu: '12'
+    limits.memory: 12Gi
+    pods: '30'
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: store-defaults
+  namespace: store-prod
+  annotations:
+    argocd.argoproj.io/sync-wave: "-20"
+spec:
+  limits:
+  - type: Container
+    default:
+      cpu: 500m
+      memory: 256Mi
+    defaultRequest:
+      cpu: 100m
+      memory: 128Mi

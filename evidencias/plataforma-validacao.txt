@@ -1,0 +1,67 @@
+NAME                            STATUS   ROLES    AGE   VERSION               ZONE
+ip-192-168-12-26.ec2.internal   Ready    <none>   19m   v1.35.9-eks-6e7947a   us-east-1a
+ip-192-168-16-73.ec2.internal   Ready    <none>   19m   v1.35.9-eks-6e7947a   us-east-1a
+ip-192-168-57-95.ec2.internal   Ready    <none>   19m   v1.35.9-eks-6e7947a   us-east-1b
+ip-192-168-88-65.ec2.internal   Ready    <none>   19m   v1.35.9-eks-6e7947a   us-east-1c
+NAME                      READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                      SELECTOR
+deployment.apps/traefik   2/2     2            2           3m    traefik      docker.io/traefik:v3.7.17   app.kubernetes.io/instance=traefik-traefik,app.kubernetes.io/name=traefik
+
+NAME              TYPE           CLUSTER-IP       EXTERNAL-IP                                                               PORT(S)                      AGE   SELECTOR
+service/traefik   LoadBalancer   10.100.153.131   a6bd9332a749d4756ba3d7e0da6a7b5b-2090545040.us-east-1.elb.amazonaws.com   80:32513/TCP,443:32654/TCP   3m    app.kubernetes.io/instance=traefik-traefik,app.kubernetes.io/name=traefik
+
+NAME                           READY   STATUS    RESTARTS   AGE   IP               NODE                            NOMINATED NODE   READINESS GATES
+pod/traefik-7f47bbd97c-2g9b4   1/1     Running   0          3m    192.168.29.120   ip-192-168-12-26.ec2.internal   <none>           <none>
+pod/traefik-7f47bbd97c-mvfqp   1/1     Running   0          3m    192.168.91.250   ip-192-168-88-65.ec2.internal   <none>           <none>
+NAME                                              READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS                        IMAGES                                            SELECTOR
+deployment.apps/keda-admission-webhooks           1/1     1            1           2m32s   keda-admission-webhooks           ghcr.io/kedacore/keda-admission-webhooks:2.21.0   app=keda-admission-webhooks
+deployment.apps/keda-operator                     1/1     1            1           2m32s   keda-operator                     ghcr.io/kedacore/keda:2.21.0                      app=keda-operator
+deployment.apps/keda-operator-metrics-apiserver   1/1     1            1           2m32s   keda-operator-metrics-apiserver   ghcr.io/kedacore/keda-metrics-apiserver:2.21.0    app=keda-operator-metrics-apiserver
+
+NAME                                      TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)            AGE     SELECTOR
+service/keda-admission-webhooks           ClusterIP   10.100.123.36    <none>        443/TCP            2m33s   app=keda-admission-webhooks
+service/keda-operator                     ClusterIP   10.100.192.104   <none>        9666/TCP           2m33s   app=keda-operator
+service/keda-operator-metrics-apiserver   ClusterIP   10.100.116.56    <none>        443/TCP,8080/TCP   2m33s   app=keda-operator-metrics-apiserver
+
+NAME                                                   READY   STATUS    RESTARTS        AGE     IP              NODE                            NOMINATED NODE   READINESS GATES
+pod/keda-admission-webhooks-78fb47bd97-h4c8t           1/1     Running   1 (2m27s ago)   2m33s   192.168.35.86   ip-192-168-57-95.ec2.internal   <none>           <none>
+pod/keda-operator-5bb8bd6bc5-vgrm7                     1/1     Running   1 (2m29s ago)   2m33s   192.168.2.136   ip-192-168-16-73.ec2.internal   <none>           <none>
+pod/keda-operator-metrics-apiserver-6f9bb597fc-8vr4n   1/1     Running   1 (2m26s ago)   2m33s   192.168.18.65   ip-192-168-12-26.ec2.internal   <none>           <none>
+NAME                                               READY   UP-TO-DATE   AVAILABLE   AGE    CONTAINERS                         IMAGES                                              SELECTOR
+deployment.apps/argocd-applicationset-controller   1/1     1            1           104s   argocd-applicationset-controller   quay.io/argoproj/argocd:v3.6.1                      app.kubernetes.io/name=argocd-applicationset-controller
+deployment.apps/argocd-dex-server                  1/1     1            1           104s   dex                                ghcr.io/dexidp/dex:v2.46.0                          app.kubernetes.io/name=argocd-dex-server
+deployment.apps/argocd-notifications-controller    1/1     1            1           104s   argocd-notifications-controller    quay.io/argoproj/argocd:v3.6.1                      app.kubernetes.io/name=argocd-notifications-controller
+deployment.apps/argocd-redis                       1/1     1            1           104s   redis                              public.ecr.aws/docker/library/redis:8.10.1-alpine   app.kubernetes.io/name=argocd-redis
+deployment.apps/argocd-repo-server                 1/1     1            1           104s   argocd-repo-server                 quay.io/argoproj/argocd:v3.6.1                      app.kubernetes.io/name=argocd-repo-server
+deployment.apps/argocd-server                      1/1     1            1           103s   argocd-server                      quay.io/argoproj/argocd:v3.6.1                      app.kubernetes.io/name=argocd-server
+
+NAME                                             READY   AGE    CONTAINERS                      IMAGES
+statefulset.apps/argocd-application-controller   1/1     104s   argocd-application-controller   quay.io/argoproj/argocd:v3.6.1
+
+NAME                                              TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE    SELECTOR
+service/argocd-application-controller             ClusterIP   None             <none>        <none>                       107s   app.kubernetes.io/name=argocd-application-controller
+service/argocd-applicationset-controller          ClusterIP   10.100.200.107   <none>        7000/TCP,8080/TCP            107s   app.kubernetes.io/name=argocd-applicationset-controller
+service/argocd-dex-server                         ClusterIP   10.100.54.55     <none>        5556/TCP,5557/TCP,5558/TCP   106s   app.kubernetes.io/name=argocd-dex-server
+service/argocd-metrics                            ClusterIP   10.100.251.199   <none>        8082/TCP                     106s   app.kubernetes.io/name=argocd-application-controller
+service/argocd-notifications-controller-metrics   ClusterIP   10.100.66.90     <none>        9001/TCP                     106s   app.kubernetes.io/name=argocd-notifications-controller
+service/argocd-redis                              ClusterIP   10.100.90.141    <none>        6379/TCP                     106s   app.kubernetes.io/name=argocd-redis
+service/argocd-repo-server                        ClusterIP   10.100.238.163   <none>        8081/TCP,8084/TCP            106s   app.kubernetes.io/name=argocd-repo-server
+service/argocd-server                             ClusterIP   10.100.193.77    <none>        80/TCP,443/TCP               106s   app.kubernetes.io/name=argocd-server
+service/argocd-server-metrics                     ClusterIP   10.100.147.42    <none>        8083/TCP                     106s   app.kubernetes.io/name=argocd-server
+
+NAME                                                    READY   STATUS    RESTARTS   AGE    IP               NODE                            NOMINATED NODE   READINESS GATES
+pod/argocd-application-controller-0                     1/1     Running   0          104s   192.168.61.205   ip-192-168-57-95.ec2.internal   <none>           <none>
+pod/argocd-applicationset-controller-5b46dffcbc-xqlnt   1/1     Running   0          105s   192.168.7.138    ip-192-168-16-73.ec2.internal   <none>           <none>
+pod/argocd-dex-server-57bccbfbb6-s779t                  1/1     Running   0          105s   192.168.73.187   ip-192-168-88-65.ec2.internal   <none>           <none>
+pod/argocd-notifications-controller-5fb6c97685-8xxpx    1/1     Running   0          105s   192.168.50.3     ip-192-168-57-95.ec2.internal   <none>           <none>
+pod/argocd-redis-6b84c6f49b-gp8w4                       1/1     Running   0          105s   192.168.5.195    ip-192-168-12-26.ec2.internal   <none>           <none>
+pod/argocd-repo-server-755f565f4f-t7gp4                 1/1     Running   0          105s   192.168.5.219    ip-192-168-16-73.ec2.internal   <none>           <none>
+pod/argocd-server-9d47c9989-gxhjs                       1/1     Running   0          104s   192.168.95.113   ip-192-168-88-65.ec2.internal   <none>           <none>
+NAME                              SERVICE                                AVAILABLE   AGE
+v1beta1.external.metrics.k8s.io   keda/keda-operator-metrics-apiserver   True        2m36s
+NAME                  STATUS   AGE   LABELS
+store-prod            Active   61s   kubernetes.io/metadata.name=store-prod,pod-security.kubernetes.io/enforce-version=v1.35,pod-security.kubernetes.io/enforce=restricted
+store-data            Active   62s   kubernetes.io/metadata.name=store-data,pod-security.kubernetes.io/enforce-version=v1.35,pod-security.kubernetes.io/enforce=baseline
+store-observability   Active   62s   kubernetes.io/metadata.name=store-observability,pod-security.kubernetes.io/enforce-version=v1.35,pod-security.kubernetes.io/enforce=restricted
+NAME   	NAMESPACE	REVISION	UPDATED                             	STATUS  	CHART         	APP VERSION
+keda   	keda     	1       	2026-11-05 20:52:27.358438 -0300 -03	deployed	keda-2.21.0   	2.21.0
+traefik	traefik  	1       	2026-11-05 20:52:03.009062 -0300 -03	deployed	traefik-42.3.0	v3.7.17

@@ -1,0 +1,22 @@
+[
+  {
+    "image": "897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api:2.0",
+    "digest": "sha256:f3297692ce444b0c507a01e0e7f760fbd5e71daa67d71afe742888db39a8bd68",
+    "sizeBytes": 54998040
+  },
+  {
+    "image": "897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api:1.0",
+    "digest": "sha256:12741c434b6e22323ad48bc55bb5613685973e628c25c4910f9a32f15cd51e69",
+    "sizeBytes": 54998042
+  },
+  {
+    "image": "897783914221.dkr.ecr.us-east-1.amazonaws.com/store-worker:1.0",
+    "digest": "sha256:64518a7cace37d45aca827de50c46a92ae4c925fbb63c6c2fb2be5f1b4533238",
+    "sizeBytes": 49211940
+  },
+  {
+    "image": "897783914221.dkr.ecr.us-east-1.amazonaws.com/store-front:1.0",
+    "digest": "sha256:9499937bb9a09904d44da2331beffd11984d108e12d757a21f483ee0c7bc24dd",
+    "sizeBytes": 23044724
+  }
+]

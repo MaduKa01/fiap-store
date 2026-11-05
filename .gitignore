@@ -1,0 +1,10 @@
+.kubeconfig*
+.runtime/
+.env
+.env.*
+*.pem
+*.key
+credentials
+.aws/
+.DS_Store
+__pycache__/

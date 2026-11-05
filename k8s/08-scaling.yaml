@@ -1,0 +1,62 @@
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: store-api
+  namespace: store-prod
+  annotations:
+    argocd.argoproj.io/sync-wave: '5'
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: store-api
+  minReplicas: 3
+  maxReplicas: 6
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 60
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: store-api
+  namespace: store-prod
+  annotations:
+    argocd.argoproj.io/sync-wave: '5'
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: store-api
+---
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: store-worker
+  namespace: store-prod
+  annotations:
+    argocd.argoproj.io/sync-wave: '5'
+spec:
+  scaleTargetRef:
+    name: store-worker
+  minReplicaCount: 0
+  maxReplicaCount: 5
+  pollingInterval: 5
+  cooldownPeriod: 30
+  advanced:
+    horizontalPodAutoscalerConfig:
+      behavior:
+        scaleDown:
+          stabilizationWindowSeconds: 30
+  triggers:
+  - type: redis
+    metadata:
+      address: store-redis.store-data.svc.cluster.local:6379
+      listName: pedidos
+      listLength: '5'
+      activationListLength: '0'

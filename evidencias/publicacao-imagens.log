@@ -1,0 +1,870 @@
+Login Succeeded
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 826B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 ...
+
+#3 [auth] library/python:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 2.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 66B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 23.69kB done
+#5 DONE 0.0s
+
+#6 [build 1/4] FROM docker.io/library/python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9
+#6 resolve docker.io/library/python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9 done
+#6 sha256:06ad939ed42b51caafb25b14810875d14e0ee0c441d3e2e5e46475fb8c150bca 249B / 249B 0.1s done
+#6 sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 0B / 12.12MB 0.3s
+#6 sha256:3764a9a7d1e8a98213ab2201a41dbf3da9c60240ea35a5ea96ab994555070a70 0B / 1.29MB 0.2s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 0B / 29.83MB 0.2s
+#6 sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 1.05MB / 12.12MB 0.5s
+#6 sha256:3764a9a7d1e8a98213ab2201a41dbf3da9c60240ea35a5ea96ab994555070a70 1.29MB / 1.29MB 1.1s done
+#6 sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 3.15MB / 12.12MB 2.0s
+#6 sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 5.24MB / 12.12MB 2.7s
+#6 sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 6.29MB / 12.12MB 3.2s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 2.10MB / 29.83MB 3.3s
+#6 sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 7.34MB / 12.12MB 3.8s
+#6 sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 8.39MB / 12.12MB 3.9s
+#6 sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 10.49MB / 12.12MB 4.4s
+#6 sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 11.53MB / 12.12MB 4.8s
+#6 sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 12.12MB / 12.12MB 4.8s done
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 4.19MB / 29.83MB 7.2s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 6.29MB / 29.83MB 8.4s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 8.39MB / 29.83MB 9.6s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 10.49MB / 29.83MB 10.1s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 12.58MB / 29.83MB 10.7s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 14.68MB / 29.83MB 12.0s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 16.78MB / 29.83MB 13.1s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 19.92MB / 29.83MB 14.1s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 22.02MB / 29.83MB 15.0s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 24.12MB / 29.83MB 15.8s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 26.21MB / 29.83MB 16.2s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 29.36MB / 29.83MB 17.3s
+#6 sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 29.83MB / 29.83MB 17.3s done
+#6 extracting sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8
+#6 extracting sha256:6b37362b3da78869050b894b799ad4df04f1f3b52774087db0d81151570244c8 1.0s done
+#6 DONE 18.4s
+
+#6 [build 1/4] FROM docker.io/library/python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9
+#6 extracting sha256:3764a9a7d1e8a98213ab2201a41dbf3da9c60240ea35a5ea96ab994555070a70 0.1s done
+#6 extracting sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0
+#6 extracting sha256:b0dc7f87bef15c2536cb182d6c48b52f90a0522884ec9eb222f833fa97ffebf0 0.5s done
+#6 DONE 18.9s
+
+#6 [build 1/4] FROM docker.io/library/python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9
+#6 extracting sha256:06ad939ed42b51caafb25b14810875d14e0ee0c441d3e2e5e46475fb8c150bca done
+#6 DONE 18.9s
+
+#7 [build 2/4] WORKDIR /build
+#7 DONE 0.1s
+
+#8 [build 3/4] COPY requirements.txt .
+#8 DONE 0.0s
+
+#9 [build 4/4] RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
+#9 3.605 Collecting fastapi==0.115.12 (from -r requirements.txt (line 1))
+#9 3.787   Downloading fastapi-0.115.12-py3-none-any.whl.metadata (27 kB)
+#9 3.853 Collecting uvicorn==0.34.2 (from -r requirements.txt (line 2))
+#9 3.869   Downloading uvicorn-0.34.2-py3-none-any.whl.metadata (6.5 kB)
+#9 3.939 Collecting psycopg==3.2.9 (from psycopg[binary]==3.2.9->-r requirements.txt (line 3))
+#9 3.957   Downloading psycopg-3.2.9-py3-none-any.whl.metadata (4.5 kB)
+#9 4.019 Collecting redis==5.2.1 (from -r requirements.txt (line 4))
+#9 4.038   Downloading redis-5.2.1-py3-none-any.whl.metadata (9.1 kB)
+#9 4.096 Collecting httpx==0.28.1 (from -r requirements.txt (line 5))
+#9 4.113   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#9 4.145 Collecting prometheus-client==0.22.1 (from -r requirements.txt (line 6))
+#9 4.157   Downloading prometheus_client-0.22.1-py3-none-any.whl.metadata (1.9 kB)
+#9 4.221 Collecting starlette<0.47.0,>=0.40.0 (from fastapi==0.115.12->-r requirements.txt (line 1))
+#9 4.251   Downloading starlette-0.46.2-py3-none-any.whl.metadata (6.2 kB)
+#9 4.501 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi==0.115.12->-r requirements.txt (line 1))
+#9 4.637   Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+#9 4.966 Collecting typing-extensions>=4.8.0 (from fastapi==0.115.12->-r requirements.txt (line 1))
+#9 4.981   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#9 5.153 Collecting click>=7.0 (from uvicorn==0.34.2->-r requirements.txt (line 2))
+#9 5.166   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#9 5.316 Collecting h11>=0.8 (from uvicorn==0.34.2->-r requirements.txt (line 2))
+#9 5.327   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#9 5.503 Collecting anyio (from httpx==0.28.1->-r requirements.txt (line 5))
+#9 5.514   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+#9 5.672 Collecting certifi (from httpx==0.28.1->-r requirements.txt (line 5))
+#9 5.683   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+#9 5.851 Collecting httpcore==1.* (from httpx==0.28.1->-r requirements.txt (line 5))
+#9 5.866   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#9 6.023 Collecting idna (from httpx==0.28.1->-r requirements.txt (line 5))
+#9 6.039   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#9 6.566 Collecting psycopg-binary==3.2.9 (from psycopg[binary]==3.2.9->-r requirements.txt (line 3))
+#9 6.593   Downloading psycopg_binary-3.2.9-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.9 kB)
+#9 6.732 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.12->-r requirements.txt (line 1))
+#9 6.742   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#9 8.814 Collecting pydantic-core==2.50.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.12->-r requirements.txt (line 1))
+#9 8.831   Downloading pydantic_core-2.50.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+#9 8.859 Collecting typing-inspection>=0.4.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.12->-r requirements.txt (line 1))
+#9 8.869   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+#9 8.905 Downloading fastapi-0.115.12-py3-none-any.whl (95 kB)
+#9 8.920 Downloading uvicorn-0.34.2-py3-none-any.whl (62 kB)
+#9 8.939 Downloading psycopg-3.2.9-py3-none-any.whl (202 kB)
+#9 8.979 Downloading redis-5.2.1-py3-none-any.whl (261 kB)
+#9 9.018 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#9 9.032 Downloading prometheus_client-0.22.1-py3-none-any.whl (58 kB)
+#9 9.045 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#9 9.066 Downloading psycopg_binary-3.2.9-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.4 MB)
+#9 10.43    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 3.1 MB/s eta 0:00:00
+#9 10.44 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#9 10.46 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#9 10.47 Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+#9 10.53 Downloading pydantic_core-2.50.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+#9 11.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 2.3 MB/s eta 0:00:00
+#9 11.42 Downloading starlette-0.46.2-py3-none-any.whl (72 kB)
+#9 11.43 Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+#9 11.46 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#9 11.47 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#9 11.50 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+#9 11.51 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#9 11.52 Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+#9 11.64 Installing collected packages: typing-extensions, redis, psycopg-binary, prometheus-client, idna, h11, click, certifi, annotated-types, uvicorn, typing-inspection, pydantic-core, psycopg, httpcore, anyio, starlette, pydantic, httpx, fastapi
+#9 13.46 Successfully installed annotated-types-0.8.0 anyio-4.16.0 certifi-2026.10.23 click-8.5.0 fastapi-0.115.12 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.20 prometheus-client-0.22.1 psycopg-3.2.9 psycopg-binary-3.2.9 pydantic-2.14.3 pydantic-core-2.50.4 redis-5.2.1 starlette-0.46.2 typing-extensions-4.16.0 typing-inspection-0.4.5 uvicorn-0.34.2
+#9 13.46 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#9 13.59
+#9 13.59 [notice] A new release of pip is available: 25.0.1 -> 26.3
+#9 13.59 [notice] To update, run: pip install --upgrade pip
+#9 DONE 13.9s
+
+#10 [stage-1 2/5] COPY --from=build /install /usr/local
+#10 DONE 0.2s
+
+#11 [stage-1 3/5] WORKDIR /app
+#11 DONE 0.0s
+
+#12 [stage-1 4/5] COPY app ./app
+#12 DONE 0.0s
+
+#13 [stage-1 5/5] RUN useradd --uid 10001 --no-create-home --shell /usr/sbin/nologin fiap
+#13 DONE 0.3s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 1.3s done
+#14 exporting manifest sha256:80b9daf728770a0b948506827ace4abb7c7d1870c4767dc8b031f5046a16eeaa done
+#14 exporting config sha256:c8fbc36d36ba31170986414fedf3ce9055550894a8e47926c553c01e860909aa done
+#14 exporting attestation manifest sha256:081c98da0e23b63e84784ee6efdd9c8c598a357157c47575198ccbfce2b2d91b 0.0s done
+#14 exporting manifest list sha256:12741c434b6e22323ad48bc55bb5613685973e628c25c4910f9a32f15cd51e69 done
+#14 naming to 897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api:1.0 done
+#14 DONE 1.4s
+The push refers to repository [897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api]
+cdd69a74c1d8: Waiting
+b0dc7f87bef1: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+c19105d188c9: Waiting
+a593270da563: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+06ad939ed42b: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+c19105d188c9: Waiting
+a593270da563: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+b0dc7f87bef1: Waiting
+c19105d188c9: Waiting
+a593270da563: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+b0dc7f87bef1: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+c19105d188c9: Waiting
+a593270da563: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+b0dc7f87bef1: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+a593270da563: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+b0dc7f87bef1: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+c19105d188c9: Waiting
+c19105d188c9: Waiting
+a593270da563: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+b0dc7f87bef1: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+c19105d188c9: Waiting
+a593270da563: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+b0dc7f87bef1: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+3764a9a7d1e8: Waiting
+c19105d188c9: Waiting
+a593270da563: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+b0dc7f87bef1: Waiting
+6b37362b3da7: Waiting
+b0dc7f87bef1: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+c19105d188c9: Waiting
+a593270da563: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+a593270da563: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+6b37362b3da7: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+d8867d13ee2e: Waiting
+d8867d13ee2e: Waiting
+c19105d188c9: Pushed
+d8867d13ee2e: Waiting
+06ad939ed42b: Pushed
+cdd69a74c1d8: Pushed
+a593270da563: Pushed
+d8867d13ee2e: Waiting
+d8867d13ee2e: Pushed
+3764a9a7d1e8: Pushed
+b0dc7f87bef1: Pushed
+a55e45f2f3ed: Pushed
+6b37362b3da7: Pushed
+1.0: digest: sha256:12741c434b6e22323ad48bc55bb5613685973e628c25c4910f9a32f15cd51e69 size: 856
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 826B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 66B done
+#3 DONE 0.0s
+
+#4 [build 1/4] FROM docker.io/library/python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9
+#4 resolve docker.io/library/python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 256B done
+#5 DONE 0.0s
+
+#6 [build 3/4] COPY requirements.txt .
+#6 CACHED
+
+#7 [build 4/4] RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
+#7 CACHED
+
+#8 [build 2/4] WORKDIR /build
+#8 CACHED
+
+#9 [stage-1 2/5] COPY --from=build /install /usr/local
+#9 CACHED
+
+#10 [stage-1 3/5] WORKDIR /app
+#10 CACHED
+
+#11 [stage-1 4/5] COPY app ./app
+#11 CACHED
+
+#12 [stage-1 5/5] RUN useradd --uid 10001 --no-create-home --shell /usr/sbin/nologin fiap
+#12 DONE 0.3s
+
+#13 exporting to image
+#13 exporting layers 0.0s done
+#13 exporting manifest sha256:139dcb52671beb7b56dbaf020648d33bcb3efee5fbd6fc1eb3dd612fb6a90af6 done
+#13 exporting config sha256:ca70e989f4fd74e9a8c0db29cbc43a972d4ee1b3b7fe3b4f60a73d4f47548898 done
+#13 exporting attestation manifest sha256:9e70444a99559a0fb1164cfabd6ba00787754a403d3fcc376ea90e71c4a58636 0.0s done
+#13 exporting manifest list sha256:f3297692ce444b0c507a01e0e7f760fbd5e71daa67d71afe742888db39a8bd68 0.0s done
+#13 naming to 897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api:2.0 done
+#13 DONE 0.1s
+The push refers to repository [897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api]
+5c8d6e882b7e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+3d815ba35fc8: Waiting
+b0dc7f87bef1: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+3764a9a7d1e8: Waiting
+5c8d6e882b7e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+3d815ba35fc8: Waiting
+b0dc7f87bef1: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+6b37362b3da7: Waiting
+5c8d6e882b7e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+3d815ba35fc8: Waiting
+b0dc7f87bef1: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+3d815ba35fc8: Waiting
+b0dc7f87bef1: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+5c8d6e882b7e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+3d815ba35fc8: Waiting
+b0dc7f87bef1: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+5c8d6e882b7e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+cdd69a74c1d8: Waiting
+3d815ba35fc8: Waiting
+b0dc7f87bef1: Waiting
+a55e45f2f3ed: Waiting
+d8867d13ee2e: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+5c8d6e882b7e: Waiting
+06ad939ed42b: Waiting
+d8867d13ee2e: Waiting
+6b37362b3da7: Waiting
+3764a9a7d1e8: Waiting
+5c8d6e882b7e: Waiting
+06ad939ed42b: Waiting
+cdd69a74c1d8: Waiting
+3d815ba35fc8: Waiting
+b0dc7f87bef1: Waiting
+a55e45f2f3ed: Waiting
+3d815ba35fc8: Waiting
+b0dc7f87bef1: Layer already exists
+a55e45f2f3ed: Layer already exists
+d8867d13ee2e: Layer already exists
+6b37362b3da7: Layer already exists
+3764a9a7d1e8: Layer already exists
+5c8d6e882b7e: Waiting
+06ad939ed42b: Layer already exists
+cdd69a74c1d8: Waiting
+5c8d6e882b7e: Waiting
+cdd69a74c1d8: Layer already exists
+3d815ba35fc8: Waiting
+3d815ba35fc8: Pushed
+5c8d6e882b7e: Pushed
+2.0: digest: sha256:f3297692ce444b0c507a01e0e7f760fbd5e71daa67d71afe742888db39a8bd68 size: 856
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 638B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 66B done
+#3 DONE 0.0s
+
+#4 [build 1/4] FROM docker.io/library/python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9
+#4 resolve docker.io/library/python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 4.74kB done
+#5 DONE 0.0s
+
+#6 [build 2/4] WORKDIR /build
+#6 CACHED
+
+#7 [build 3/4] COPY requirements.txt .
+#7 DONE 0.0s
+
+#8 [build 4/4] RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
+#8 2.537 Collecting psycopg==3.2.9 (from psycopg[binary]==3.2.9->-r requirements.txt (line 1))
+#8 2.865   Downloading psycopg-3.2.9-py3-none-any.whl.metadata (4.5 kB)
+#8 3.048 Collecting redis==5.2.1 (from -r requirements.txt (line 2))
+#8 3.060   Downloading redis-5.2.1-py3-none-any.whl.metadata (9.1 kB)
+#8 3.230 Collecting typing-extensions>=4.6 (from psycopg==3.2.9->psycopg[binary]==3.2.9->-r requirements.txt (line 1))
+#8 3.375   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#8 3.884 Collecting psycopg-binary==3.2.9 (from psycopg[binary]==3.2.9->-r requirements.txt (line 1))
+#8 3.910   Downloading psycopg_binary-3.2.9-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.9 kB)
+#8 3.932 Downloading psycopg-3.2.9-py3-none-any.whl (202 kB)
+#8 4.261 Downloading redis-5.2.1-py3-none-any.whl (261 kB)
+#8 4.443 Downloading psycopg_binary-3.2.9-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.4 MB)
+#8 5.936    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 2.8 MB/s eta 0:00:00
+#8 5.958 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#8 6.021 Installing collected packages: typing-extensions, redis, psycopg-binary, psycopg
+#8 6.760 Successfully installed psycopg-3.2.9 psycopg-binary-3.2.9 redis-5.2.1 typing-extensions-4.16.0
+#8 6.761 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 6.889
+#8 6.889 [notice] A new release of pip is available: 25.0.1 -> 26.3
+#8 6.889 [notice] To update, run: pip install --upgrade pip
+#8 DONE 7.1s
+
+#4 [build 1/4] FROM docker.io/library/python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9
+#4 CACHED
+
+#9 [stage-1 2/5] COPY --from=build /install /usr/local
+#9 DONE 0.1s
+
+#10 [stage-1 3/5] WORKDIR /app
+#10 DONE 0.0s
+
+#11 [stage-1 4/5] COPY worker ./worker
+#11 DONE 0.0s
+
+#12 [stage-1 5/5] RUN useradd --uid 10001 --no-create-home --shell /usr/sbin/nologin fiap
+#12 DONE 0.3s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.7s done
+#13 exporting manifest sha256:a9974862a6762858474517c6a058726f1b5e28f74ebd876eb697b33a80242dfc
+#13 exporting manifest sha256:a9974862a6762858474517c6a058726f1b5e28f74ebd876eb697b33a80242dfc done
+#13 exporting config sha256:464358d49f792879e3a1a387a3843a778ebc691f4814db3949f94ab16c8d9361 done
+#13 exporting attestation manifest sha256:88277df035faba123558954e82b212361f2c0214f63848ac826472134e50ef8d done
+#13 exporting manifest list sha256:64518a7cace37d45aca827de50c46a92ae4c925fbb63c6c2fb2be5f1b4533238 done
+#13 naming to 897783914221.dkr.ecr.us-east-1.amazonaws.com/store-worker:1.0 done
+#13 DONE 0.8s
+The push refers to repository [897783914221.dkr.ecr.us-east-1.amazonaws.com/store-worker]
+e94d67e33168: Waiting
+06ad939ed42b: Waiting
+3764a9a7d1e8: Waiting
+5d3d691c716f: Waiting
+8eb9b5092336: Waiting
+eedefdee9988: Waiting
+b0dc7f87bef1: Waiting
+ea2816138f3f: Waiting
+6b37362b3da7: Waiting
+06ad939ed42b: Waiting
+3764a9a7d1e8: Waiting
+5d3d691c716f: Waiting
+8eb9b5092336: Waiting
+eedefdee9988: Waiting
+b0dc7f87bef1: Waiting
+ea2816138f3f: Waiting
+6b37362b3da7: Waiting
+e94d67e33168: Waiting
+b0dc7f87bef1: Waiting
+ea2816138f3f: Waiting
+6b37362b3da7: Waiting
+e94d67e33168: Waiting
+06ad939ed42b: Waiting
+3764a9a7d1e8: Waiting
+5d3d691c716f: Waiting
+8eb9b5092336: Waiting
+eedefdee9988: Waiting
+8eb9b5092336: Waiting
+eedefdee9988: Waiting
+b0dc7f87bef1: Waiting
+ea2816138f3f: Waiting
+6b37362b3da7: Waiting
+e94d67e33168: Waiting
+06ad939ed42b: Waiting
+3764a9a7d1e8: Waiting
+5d3d691c716f: Waiting
+ea2816138f3f: Waiting
+6b37362b3da7: Waiting
+e94d67e33168: Waiting
+06ad939ed42b: Waiting
+3764a9a7d1e8: Waiting
+5d3d691c716f: Waiting
+8eb9b5092336: Waiting
+eedefdee9988: Waiting
+b0dc7f87bef1: Waiting
+e94d67e33168: Waiting
+06ad939ed42b: Waiting
+3764a9a7d1e8: Waiting
+5d3d691c716f: Waiting
+8eb9b5092336: Waiting
+eedefdee9988: Waiting
+b0dc7f87bef1: Waiting
+ea2816138f3f: Waiting
+6b37362b3da7: Waiting
+ea2816138f3f: Waiting
+6b37362b3da7: Waiting
+e94d67e33168: Waiting
+06ad939ed42b: Waiting
+3764a9a7d1e8: Waiting
+5d3d691c716f: Waiting
+8eb9b5092336: Waiting
+eedefdee9988: Waiting
+b0dc7f87bef1: Waiting
+3764a9a7d1e8: Waiting
+5d3d691c716f: Waiting
+8eb9b5092336: Waiting
+eedefdee9988: Waiting
+b0dc7f87bef1: Waiting
+ea2816138f3f: Waiting
+6b37362b3da7: Waiting
+e94d67e33168: Waiting
+06ad939ed42b: Waiting
+ea2816138f3f: Waiting
+6b37362b3da7: Waiting
+e94d67e33168: Waiting
+06ad939ed42b: Waiting
+3764a9a7d1e8: Waiting
+5d3d691c716f: Waiting
+8eb9b5092336: Waiting
+eedefdee9988: Waiting
+b0dc7f87bef1: Waiting
+b0dc7f87bef1: Waiting
+6b37362b3da7: Waiting
+eedefdee9988: Pushed
+ea2816138f3f: Pushed
+e94d67e33168: Pushed
+06ad939ed42b: Pushed
+5d3d691c716f: Pushed
+3764a9a7d1e8: Pushed
+8eb9b5092336: Pushed
+b0dc7f87bef1: Pushed
+6b37362b3da7: Pushed
+1.0: digest: sha256:64518a7cace37d45aca827de50c46a92ae4c925fbb63c6c2fb2be5f1b4533238 size: 856
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 328B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/nginxinc/nginx-unprivileged:1.28-alpine
+#2 ...
+
+#3 [auth] nginxinc/nginx-unprivileged:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/nginxinc/nginx-unprivileged:1.28-alpine
+#2 DONE 2.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 12.25kB done
+#5 DONE 0.0s
+
+#6 [1/2] FROM docker.io/nginxinc/nginx-unprivileged:1.28-alpine@sha256:7377697a821c131a924a7105fafbe7414db4e9fcc77a6f08f776f33f141ec3f8
+#6 resolve docker.io/nginxinc/nginx-unprivileged:1.28-alpine@sha256:7377697a821c131a924a7105fafbe7414db4e9fcc77a6f08f776f33f141ec3f8 0.0s done
+#6 DONE 0.1s
+
+#6 [1/2] FROM docker.io/nginxinc/nginx-unprivileged:1.28-alpine@sha256:7377697a821c131a924a7105fafbe7414db4e9fcc77a6f08f776f33f141ec3f8
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 0B / 17.32MB 0.2s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 1.05MB / 17.32MB 0.3s
+#6 sha256:23989ee5bbc825a89e32baddeb2ef1f07f6bca3014c5fef477ad65148f00474b 0B / 1.40kB 0.2s
+#6 sha256:4b28009d642cf0330a6ad0efc0cd7f0133a6a163f4930ef4a34d214678d048c4 0B / 1.21kB 0.2s
+#6 sha256:a56f67403765ad571c74c15b12a1f2397747eb57a3594d4f8caf0033a91b5603 0B / 405B 0.2s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 3.15MB / 17.32MB 0.8s
+#6 sha256:23989ee5bbc825a89e32baddeb2ef1f07f6bca3014c5fef477ad65148f00474b 1.40kB / 1.40kB 1.4s done
+#6 sha256:4b28009d642cf0330a6ad0efc0cd7f0133a6a163f4930ef4a34d214678d048c4 1.21kB / 1.21kB 1.4s done
+#6 sha256:a56f67403765ad571c74c15b12a1f2397747eb57a3594d4f8caf0033a91b5603 405B / 405B 1.4s done
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 4.19MB / 17.32MB 1.7s
+#6 sha256:7bff903f3e4bc0e25a02c6866784427925a7756615e68029cd204b824be80ab9 957B / 957B 0.1s done
+#6 sha256:de3f5433cf840b73d7768877327223532b765f7c4a752829cd351a996c9da11d 627B / 627B 0.2s done
+#6 sha256:22ee3e48cf91ed95688294499b3883f71b9938f44427e1491dcde5f6a35c5e3e 2.79kB / 2.79kB 0.2s done
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 5.24MB / 17.32MB 1.8s
+#6 sha256:7069fe5ce3c2902d9e0970472de149060a7674567435972445daeb9146d17926 0B / 1.83MB 0.2s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0B / 3.86MB 0.2s
+#6 sha256:7069fe5ce3c2902d9e0970472de149060a7674567435972445daeb9146d17926 1.05MB / 1.83MB 0.8s
+#6 sha256:7069fe5ce3c2902d9e0970472de149060a7674567435972445daeb9146d17926 1.83MB / 1.83MB 1.5s done
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 6.29MB / 17.32MB 3.9s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 7.34MB / 17.32MB 4.1s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 8.39MB / 17.32MB 5.6s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 9.44MB / 17.32MB 5.7s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0B / 3.86MB 5.3s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 10.49MB / 17.32MB 7.1s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 11.53MB / 17.32MB 8.1s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 12.58MB / 17.32MB 8.3s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 14.68MB / 17.32MB 9.2s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 15.73MB / 17.32MB 10.5s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 16.78MB / 17.32MB 11.1s
+#6 sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 17.32MB / 17.32MB 11.2s done
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0B / 3.86MB 10.4s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0B / 3.86MB 15.5s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0B / 3.86MB 20.6s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0B / 3.86MB 25.7s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0B / 3.86MB 30.8s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0B / 3.86MB 35.9s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 36.9s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 42.0s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 47.1s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 52.2s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 57.3s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 62.4s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 67.5s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 72.6s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 77.7s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 82.8s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 87.9s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 93.0s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 98.1s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 103.2s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 108.3s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 113.4s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 118.5s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 123.6s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 1.05MB / 3.86MB 128.7s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 131.5s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 136.6s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 141.7s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 146.9s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 151.9s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 157.0s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 162.2s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 167.2s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 172.3s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 177.4s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 2.10MB / 3.86MB 182.6s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 3.15MB / 3.86MB 185.8s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 3.15MB / 3.86MB 190.9s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 3.15MB / 3.86MB 196.0s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 3.15MB / 3.86MB 201.1s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 3.15MB / 3.86MB 206.2s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 3.15MB / 3.86MB 211.3s
+#6 sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 3.86MB / 3.86MB 213.0s done
+#6 extracting sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0.1s done
+#6 extracting sha256:7069fe5ce3c2902d9e0970472de149060a7674567435972445daeb9146d17926 0.1s done
+#6 DONE 214.8s
+
+#6 [1/2] FROM docker.io/nginxinc/nginx-unprivileged:1.28-alpine@sha256:7377697a821c131a924a7105fafbe7414db4e9fcc77a6f08f776f33f141ec3f8
+#6 extracting sha256:22ee3e48cf91ed95688294499b3883f71b9938f44427e1491dcde5f6a35c5e3e done
+#6 extracting sha256:de3f5433cf840b73d7768877327223532b765f7c4a752829cd351a996c9da11d done
+#6 extracting sha256:7bff903f3e4bc0e25a02c6866784427925a7756615e68029cd204b824be80ab9 0.0s done
+#6 extracting sha256:a56f67403765ad571c74c15b12a1f2397747eb57a3594d4f8caf0033a91b5603 done
+#6 extracting sha256:4b28009d642cf0330a6ad0efc0cd7f0133a6a163f4930ef4a34d214678d048c4 0.0s done
+#6 extracting sha256:23989ee5bbc825a89e32baddeb2ef1f07f6bca3014c5fef477ad65148f00474b done
+#6 extracting sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1
+#6 extracting sha256:bc3bb88a6392fa99a47979885def71d61f8afd0cc9d132b887f6576512f73de1 0.3s done
+#6 DONE 215.2s
+
+#7 [2/2] COPY html/ /usr/share/nginx/html/
+#7 DONE 0.1s
+
+#8 exporting to image
+#8 exporting layers 0.0s done
+#8 exporting manifest sha256:42bcce30401fe3125cfb7ac0247300848e520fa210eef58ccbc93cd670bd92e1 done
+#8 exporting config sha256:755a420cc0e4b9b69ee90ae52a09d3c3c449f2781a3fb8c4cfb5b27eadd9ee66 done
+#8 exporting attestation manifest sha256:0a6c15788a9c71699a0e31fcb44f5c052b37de0fcd2df9c9de7d3be139fbd129 0.0s done
+#8 exporting manifest list sha256:9499937bb9a09904d44da2331beffd11984d108e12d757a21f483ee0c7bc24dd done
+#8 naming to 897783914221.dkr.ecr.us-east-1.amazonaws.com/store-front:1.0 done
+#8 DONE 0.1s
+The push refers to repository [897783914221.dkr.ecr.us-east-1.amazonaws.com/store-front]
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+7bff903f3e4b: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+c42295d60792: Waiting
+589002ba0eae: Waiting
+a56f67403765: Waiting
+a56f67403765: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+22ee3e48cf91: Waiting
+4b28009d642c: Waiting
+23989ee5bbc8: Waiting
+de3f5433cf84: Waiting
+46dc0880b7a6: Waiting
+de3f5433cf84: Waiting
+7069fe5ce3c2: Waiting
+bc3bb88a6392: Waiting
+de3f5433cf84: Waiting
+7bff903f3e4b: Pushed
+46dc0880b7a6: Pushed
+c42295d60792: Pushed
+a56f67403765: Pushed
+22ee3e48cf91: Pushed
+23989ee5bbc8: Pushed
+4b28009d642c: Pushed
+de3f5433cf84: Pushed
+7069fe5ce3c2: Pushed
+589002ba0eae: Pushed
+bc3bb88a6392: Pushed
+1.0: digest: sha256:9499937bb9a09904d44da2331beffd11984d108e12d757a21f483ee0c7bc24dd size: 856

@@ -1,0 +1,183 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: store-db
+  namespace: store-data
+  annotations:
+    argocd.argoproj.io/sync-wave: "-15"
+spec:
+  type: ClusterIP
+  selector:
+    app: store-db
+  ports:
+  - name: tcp
+    port: 5432
+    targetPort: 5432
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: store-redis
+  namespace: store-data
+  annotations:
+    argocd.argoproj.io/sync-wave: "-15"
+spec:
+  type: ClusterIP
+  selector:
+    app: store-redis
+  ports:
+  - name: tcp
+    port: 6379
+    targetPort: 6379
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: store-db
+  namespace: store-data
+  annotations:
+    argocd.argoproj.io/sync-wave: "-10"
+spec:
+  serviceName: store-db
+  replicas: 1
+  selector:
+    matchLabels:
+      app: store-db
+  template:
+    metadata:
+      labels:
+        app: store-db
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+        runAsUser: 70
+        runAsGroup: 70
+        fsGroup: 70
+      containers:
+      - image: postgres:16-alpine
+        resources:
+          requests:
+            cpu: 150m
+            memory: 256Mi
+          limits:
+            cpu: '1'
+            memory: 512Mi
+        env:
+        - name: POSTGRES_DB
+          value: fiapstore
+        - name: POSTGRES_USER
+          value: fiapstore
+        - name: PGDATA
+          value: "/var/lib/postgresql/data/pgdata"
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: store-db-credentials
+              key: password
+        ports:
+        - containerPort: 5432
+        volumeMounts:
+        - name: data
+          mountPath: "/var/lib/postgresql/data"
+        - name: tmp
+          mountPath: "/tmp"
+        - name: run
+          mountPath: "/var/run/postgresql"
+        readinessProbe:
+          exec:
+            command:
+            - pg_isready
+            - "-U"
+            - fiapstore
+            - "-d"
+            - fiapstore
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        name: store-db
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop:
+            - ALL
+      volumes:
+      - name: tmp
+        emptyDir: {}
+      - name: run
+        emptyDir: {}
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      storageClassName: store-ebs
+      resources:
+        requests:
+          storage: 4Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: store-redis
+  namespace: store-data
+  annotations:
+    argocd.argoproj.io/sync-wave: "-10"
+spec:
+  selector:
+    matchLabels:
+      app: store-redis
+  template:
+    metadata:
+      labels:
+        app: store-redis
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+        runAsUser: 999
+        runAsGroup: 999
+        fsGroup: 999
+      containers:
+      - image: redis:7.4-alpine
+        command:
+        - redis-server
+        - "--save"
+        - ''
+        - "--appendonly"
+        - 'no'
+        resources:
+          requests:
+            cpu: 100m
+            memory: 64Mi
+          limits:
+            cpu: 300m
+            memory: 128Mi
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+        - name: data
+          mountPath: "/data"
+        readinessProbe:
+          exec:
+            command:
+            - redis-cli
+            - ping
+          periodSeconds: 5
+        name: store-redis
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop:
+            - ALL
+      volumes:
+      - name: data
+        emptyDir: {}
+  replicas: 1

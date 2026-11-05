@@ -1,0 +1,41 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fiap-store
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/MaduKa01/fiap-store.git
+    targetRevision: main
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: store-prod
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    retry:
+      limit: 10
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
+    syncOptions:
+    - CreateNamespace=true
+    - RespectIgnoreDifferences=true
+  ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    name: store-api
+    namespace: store-prod
+    jsonPointers:
+    - "/spec/replicas"
+  - group: apps
+    kind: Deployment
+    name: store-worker
+    namespace: store-prod
+    jsonPointers:
+    - "/spec/replicas"

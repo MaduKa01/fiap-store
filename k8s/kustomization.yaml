@@ -1,0 +1,16 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- 00-namespaces.yaml
+- 01-storage.yaml
+- 02-config.yaml
+- 03-rbac.yaml
+- 04-network.yaml
+- 05-data.yaml
+- 06-migration.yaml
+- 07-app.yaml
+- '08-scaling.yaml'
+- '09-report.yaml'
+- 10-ingress.yaml
+- 11-daemonset.yaml

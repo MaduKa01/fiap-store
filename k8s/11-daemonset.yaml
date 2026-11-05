@@ -1,0 +1,53 @@
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: store-node-metrics
+  namespace: store-observability
+  annotations:
+    argocd.argoproj.io/sync-wave: '0'
+spec:
+  selector:
+    matchLabels:
+      app: store-node-metrics
+  template:
+    metadata:
+      labels:
+        app: store-node-metrics
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+        runAsUser: 65534
+        runAsGroup: 65534
+      containers:
+      - image: prom/node-exporter:v1.9.1
+        args:
+        - "--web.listen-address=:9100"
+        ports:
+        - name: metrics
+          containerPort: 9100
+        resources:
+          requests:
+            cpu: 25m
+            memory: 32Mi
+          limits:
+            cpu: 100m
+            memory: 64Mi
+        readinessProbe:
+          httpGet:
+            path: "/metrics"
+            port: 9100
+          periodSeconds: 15
+        name: store-node-metrics
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop:
+            - ALL
+      tolerations:
+      - operator: Exists
+        effect: NoSchedule
