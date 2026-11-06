@@ -9,7 +9,7 @@ Plataforma Amazon EKS para a aplicação do professor Fabio Bara. Código origin
 
 ## Estado da entrega
 
-Cluster fiap-store criado em 05/11/2026 na conta Academy: quatro nós Ready em três zonas, Kubernetes 1.35, EBS CSI ativo, Metrics Server com leituras e VPC CNI com NetworkPolicy habilitada. Imagens ECR publicadas: API 1.0/2.0, worker 1.0 e front 1.0, todas linux/amd64 com usuários não root. Traefik, KEDA e Argo CD instalados; namespaces da aplicação criados. Aplicação, scans Trivy e pontuação ainda não verificados no EKS. Os relatórios Trivy serão produzidos com imagens reais. Não são fornecidos resultados fictícios. Atualize este parágrafo após o ensaio e registre as pendências reais.
+Cluster fiap-store criado em 05/11/2026 na conta Academy: quatro nós Ready em três zonas, Kubernetes 1.35, EBS CSI ativo, Metrics Server com leituras e VPC CNI com NetworkPolicy habilitada. Imagens ECR publicadas: API 1.0/2.0, worker 1.0 e front 1.0, todas linux/amd64 com usuários não root. Traefik, KEDA e Argo CD instalados; namespaces da aplicação criados. Aplicação implantada por Argo CD com estado Synced/Healthy; página e catálogo responderam HTTP 200 por HTTPS. Primeira avaliação em 05/11/2026: 78/80, com pendência apenas B7 (rollout real 1.0 → 2.0 ainda não realizado). Scans Trivy e desafios ao vivo continuam pendentes. Os relatórios Trivy serão produzidos com imagens reais. Não são fornecidos resultados fictícios. Atualize este parágrafo após o ensaio e registre as pendências reais.
 
 ## Arquitetura e decisões
 
