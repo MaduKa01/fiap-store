@@ -1,0 +1,2 @@
+NAME         SYNC STATUS   HEALTH STATUS   REVISION                                   PROJECT
+fiap-store   Synced        Healthy         c78366a732ca70870161fcc9456e179cb48498db   default

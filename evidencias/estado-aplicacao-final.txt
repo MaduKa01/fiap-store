@@ -1,0 +1,33 @@
+NAME                           READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS     IMAGES                                                          SELECTOR
+deployment.apps/store-api      3/3     3            3           31m   store-api      897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api:2.0      app=store-api
+deployment.apps/store-front    2/2     2            2           31m   store-front    897783914221.dkr.ecr.us-east-1.amazonaws.com/store-front:1.1    app=store-front
+deployment.apps/store-worker   0/0     0            0           31m   store-worker   897783914221.dkr.ecr.us-east-1.amazonaws.com/store-worker:1.0   app=store-worker
+
+NAME                                      DESIRED   CURRENT   READY   AGE     CONTAINERS     IMAGES                                                          SELECTOR
+replicaset.apps/store-api-57d65b698       0         0         0       31m     store-api      897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api:1.0      app=store-api,pod-template-hash=57d65b698
+replicaset.apps/store-api-c57bbfdc5       3         3         3       11m     store-api      897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api:2.0      app=store-api,pod-template-hash=c57bbfdc5
+replicaset.apps/store-front-55b48c55c5    2         2         2       2m48s   store-front    897783914221.dkr.ecr.us-east-1.amazonaws.com/store-front:1.1    app=store-front,pod-template-hash=55b48c55c5
+replicaset.apps/store-front-7c7785d9db    0         0         0       31m     store-front    897783914221.dkr.ecr.us-east-1.amazonaws.com/store-front:1.0    app=store-front,pod-template-hash=7c7785d9db
+replicaset.apps/store-worker-678d88b796   0         0         0       31m     store-worker   897783914221.dkr.ecr.us-east-1.amazonaws.com/store-worker:1.0   app=store-worker,pod-template-hash=678d88b796
+
+NAME                                                        REFERENCE                 TARGETS             MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/keda-hpa-store-worker   Deployment/store-worker   <unknown>/5 (avg)   1         5         0          31m
+horizontalpodautoscaler.autoscaling/store-api               Deployment/store-api      cpu: 4%/60%         3         6         3          31m
+
+NAME                                SCALETARGETKIND      SCALETARGETNAME   MIN   MAX   READY   ACTIVE   FALLBACK   PAUSED   TRIGGERS   AUTHENTICATIONS   AGE
+scaledobject.keda.sh/store-worker   apps/v1.Deployment   store-worker      0     5     True    False    False      False    redis                        31m
+
+NAME                              STATUS     COMPLETIONS   DURATION   AGE     CONTAINERS     IMAGES                                                          SELECTOR
+job.batch/db-migrate              Complete   1/1           6s         3m      db-migrate     897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api:1.0      batch.kubernetes.io/controller-uid=3f5152c0-1265-4a65-a28e-38e40493f8fe
+job.batch/store-report-29898748   Complete   1/1           6s         5m53s   store-report   897783914221.dkr.ecr.us-east-1.amazonaws.com/store-worker:1.0   batch.kubernetes.io/controller-uid=55e6cf75-2c9d-44c3-95fa-aa63aa87af99
+job.batch/store-report-29898750   Complete   1/1           5s         3m53s   store-report   897783914221.dkr.ecr.us-east-1.amazonaws.com/store-worker:1.0   batch.kubernetes.io/controller-uid=69842d45-95e5-4b69-98ae-1416538974c5
+job.batch/store-report-29898752   Complete   1/1           5s         113s    store-report   897783914221.dkr.ecr.us-east-1.amazonaws.com/store-worker:1.0   batch.kubernetes.io/controller-uid=c165f282-3701-4bdd-9797-64c789cb5f00
+
+NAME                         SCHEDULE      TIMEZONE   SUSPEND   ACTIVE   LAST SCHEDULE   AGE   CONTAINERS     IMAGES                                                          SELECTOR
+cronjob.batch/store-report   */2 * * * *   <none>     False     0        113s            31m   store-report   897783914221.dkr.ecr.us-east-1.amazonaws.com/store-worker:1.0   <none>
+
+NAME                                   MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+poddisruptionbudget.policy/store-api   2               N/A               1                     31m
+
+NAME                                      CLASS     HOSTS   ADDRESS                                                                   PORTS     AGE
+ingress.networking.k8s.io/store-ingress   traefik   *       a6bd9332a749d4756ba3d7e0da6a7b5b-2090545040.us-east-1.elb.amazonaws.com   80, 443   31m

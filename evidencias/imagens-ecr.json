@@ -18,5 +18,10 @@
     "image": "897783914221.dkr.ecr.us-east-1.amazonaws.com/store-front:1.0",
     "digest": "sha256:9499937bb9a09904d44da2331beffd11984d108e12d757a21f483ee0c7bc24dd",
     "sizeBytes": 23044724
+  },
+  {
+    "image": "897783914221.dkr.ecr.us-east-1.amazonaws.com/store-front:1.1",
+    "digest": "sha256:2c4ab0bc785cef432f85edfc32ca6562d0ebcebead64cfea04eebc3822e2b7c9",
+    "sizeBytes": 27877656
   }
 ]
