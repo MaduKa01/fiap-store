@@ -23,7 +23,7 @@ spec:
         runAsUser: 10001
         runAsGroup: 10001
       containers:
-      - image: 897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api:2.0
+      - image: 897783914221.dkr.ecr.us-east-1.amazonaws.com/store-api:1.0
         resources:
           requests:
             cpu: 100m
