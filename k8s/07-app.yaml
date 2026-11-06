@@ -123,7 +123,7 @@ spec:
         runAsUser: 101
         runAsGroup: 101
       containers:
-      - image: 897783914221.dkr.ecr.us-east-1.amazonaws.com/store-front:1.0
+      - image: 897783914221.dkr.ecr.us-east-1.amazonaws.com/store-front:1.1
         resources:
           requests:
             cpu: 50m

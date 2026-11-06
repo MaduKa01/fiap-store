@@ -1,0 +1,4 @@
+brotli-libs-1.2.1-r0 x86_64 {brotli} (MIT) [installed]
+libcrypto3-3.5.9-r0 x86_64 {openssl} (Apache-2.0) [installed]
+libssl3-3.5.9-r0 x86_64 {openssl} (Apache-2.0) [installed]
+nginx-1.30.6-r1 x86_64 {nginx} (2-clause BSD-like license) [installed]

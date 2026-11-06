@@ -1,0 +1,46 @@
+[
+  {
+    "image": "store-api-1.0",
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 55,
+      "MEDIUM": 110,
+      "LOW": 70,
+      "UNKNOWN": 9
+    },
+    "createdAt": "2026-11-05T21:25:05.275991-03:00"
+  },
+  {
+    "image": "store-api-2.0",
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 55,
+      "MEDIUM": 110,
+      "LOW": 70,
+      "UNKNOWN": 9
+    },
+    "createdAt": "2026-11-05T21:25:06.293764-03:00"
+  },
+  {
+    "image": "store-worker-1.0",
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 52,
+      "MEDIUM": 107,
+      "LOW": 69,
+      "UNKNOWN": 9
+    },
+    "createdAt": "2026-11-05T21:25:07.267854-03:00"
+  },
+  {
+    "image": "store-front-1.1",
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 0,
+      "UNKNOWN": 0
+    },
+    "createdAt": "2026-11-05T21:28:18.856909-03:00"
+  }
+]

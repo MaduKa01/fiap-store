@@ -19,4 +19,9 @@ for repo in store-api store-worker store-front; do
 done
 aws ecr get-login-password | docker login --username AWS --password-stdin "$REGISTRY"
 for v in 1.0 2.0; do docker build --platform linux/amd64 --build-arg "APP_VERSION=$v" -t "$REGISTRY/store-api:$v" store-api; docker push "$REGISTRY/store-api:$v"; done
-for component in store-worker store-front; do docker build --platform linux/amd64 -t "$REGISTRY/$component:1.0" "$component"; docker push "$REGISTRY/$component:1.0"; done
+for component in store-worker store-front; do
+ version=1.0
+ [[ "$component" == store-front ]] && version=1.1
+ docker build --platform linux/amd64 -t "$REGISTRY/$component:$version" "$component"
+ docker push "$REGISTRY/$component:$version"
+done
