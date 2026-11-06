@@ -1,0 +1,5 @@
+
+DESAFIO 06-pod-security | 2026-11-06_14-27-06
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-prod run psa-ensaio --image=busybox:1.36 --privileged --restart=Never --dry-run=server -- sleep 10
+Error from server (Forbidden): pods "psa-ensaio" is forbidden: violates PodSecurity "restricted:v1.35": privileged (container "psa-ensaio" must not set securityContext.privileged=true), allowPrivilegeEscalation != false (container "psa-ensaio" must set securityContext.allowPrivilegeEscalation=false), unrestricted capabilities (container "psa-ensaio" must set securityContext.capabilities.drop=["ALL"]), runAsNonRoot != true (pod or container "psa-ensaio" must set securityContext.runAsNonRoot=true), seccompProfile (pod or container "psa-ensaio" must set securityContext.seccompProfile.type to "RuntimeDefault" or "Localhost")
+OK: a admissao recusou o Pod privilegiado; nenhum Pod foi criado.

@@ -1,0 +1,10 @@
+
+DESAFIO 01-self-healing | 2026-11-06_14-27-06
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-prod delete pod store-api-c57bbfdc5-2rf5r --wait=true
+pod "store-api-c57bbfdc5-2rf5r" deleted from store-prod namespace
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-prod get pods -l app=store-api -o wide
+NAME                        READY   STATUS    RESTARTS   AGE   IP               NODE                            NOMINATED NODE   READINESS GATES
+store-api-c57bbfdc5-6m5x7   1/1     Running   0          14h   192.168.16.174   ip-192-168-21-66.ec2.internal   <none>           <none>
+store-api-c57bbfdc5-gt6c4   1/1     Running   0          11s   192.168.37.218   ip-192-168-61-86.ec2.internal   <none>           <none>
+store-api-c57bbfdc5-qqm9q   1/1     Running   0          14h   192.168.82.88    ip-192-168-86-96.ec2.internal   <none>           <none>
+OK: uma nova replica foi criada e a API responde.

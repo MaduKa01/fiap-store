@@ -1,0 +1,8 @@
+
+DESAFIO 07-persistencia | 2026-11-06_14-27-06
+ANTES: {"pedidos": 50, "pvcUID": "e4d8d65c-23ae-4183-93d5-022f0001b327", "volume": "pvc-e4d8d65c-23ae-4183-93d5-022f0001b327"}
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-data delete pod store-db-0 --wait=true
+pod "store-db-0" deleted from store-data namespace
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-data wait pod/store-db-0 --for=condition=Ready --timeout=240s
+pod/store-db-0 condition met
+OK: 50 pedidos e o mesmo PVC/volume preservados apos recriar o Pod do banco.

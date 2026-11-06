@@ -1,0 +1,8 @@
+
+DESAFIO 03-relatorio | 2026-11-06_14-27-06
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-prod create job --from=cronjob/store-report report-ensaio-1793986118
+job.batch/report-ensaio-1793986118 created
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-prod wait --for=condition=complete job/report-ensaio-1793986118 --timeout=180s
+job.batch/report-ensaio-1793986118 condition met
+[{"id": 88, "gerado_em": "2026-11-06T17:28:41.725595+00:00", "gerado_por": "report-ensaio-1793986118-p7rkl", "total_pedidos": 50, "processados": 50, "pendentes": 0, "valor_total": 59261.0}, {"id": 87, "gerado_em": "2026-11-06T17:28:04.146624+00:00", "gerado_por": "store-report-29899768-rz57w", "total_pedidos": 50, "processados": 35, "pendentes": 15, "valor_total": 59261.0}, {"id": 86, "gerado_em": "2026-11-06T17:26:54.269446+00:00", "gerado_por": "store-report-29899766-b62k7", "total_pedidos": 0, "processados": 0, "pendentes": 0, "valor_total": 0.0}, {"id": 85, "gerado_em": "2026-11-06T02:52:02.386807+00:00", "gerado_por": "store-report-29898892-wk8dd", "total_pedidos": 0, "processados": 0, "pendentes": 0, "valor_total": 0.0}, {"id": 84, "gerado_em": "2026-11-06T02:50:03.414575+00:00", "gerado_por": "store-report-29898890-9hv4h", "total_pedidos": 0, "processados": 0, "pendentes": 0, "valor_total": 0.0}]
+OK: Job de relatorio concluido.

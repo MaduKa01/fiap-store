@@ -1,0 +1,8 @@
+
+DESAFIO 09-drift | 2026-11-06_14-27-06
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-prod delete service store-front
+service "store-front" deleted from store-prod namespace
+OK: Argo CD recriou o Service com um novo UID.
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-prod get service store-front
+NAME          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+store-front   ClusterIP   10.100.211.77   <none>        8080/TCP   2s

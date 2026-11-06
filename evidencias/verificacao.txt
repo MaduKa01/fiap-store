@@ -1,6 +1,6 @@
 ===================================================================================
  FIAP Store - Global Solution - verificacao automatica
- Data:     05/11/2026 21:31:39
+ Data:     06/11/2026 14:33:15
  Contexto: arn:aws:eks:us-east-1:897783914221:cluster/fiap-store
  Servidor: https://6548BD3BFC027A91065FF036721918F6.gr7.us-east-1.eks.amazonaws.com
  Conta AWS (credenciais atuais): 897783914221
@@ -59,7 +59,7 @@ E. Jobs e Secrets (cap. 8)
   [OK]   E1   Job db-migrate concluido                                        2/2
          -> execucoes bem-sucedidas: 1
   [OK]   E2   CronJob store-report com execucao bem-sucedida                  3/3
-         -> agenda: */2 * * * * | ultimo sucesso: 2026-11-06T00:32:05Z
+         -> agenda: */2 * * * * | ultimo sucesso: 2026-11-06T17:34:06Z
   [OK]   E3   Senha do banco vinda do Secret store-db-credentials             3/3
          -> Secrets referenciados:  store-db-credentials
 

@@ -1,0 +1,7 @@
+
+DESAFIO 05-rede | 2026-11-06_14-27-06
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-prod exec deploy/store-front -- nc -z -w 3 store-db.store-data.svc.cluster.local 5432
+command terminated with exit code 1
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl -n store-prod exec deploy/store-api -- python -c import socket; socket.create_connection(('store-db.store-data.svc.cluster.local',5432),3); print('API conecta no banco')
+API conecta no banco
+OK: front bloqueado e API permitida no banco.

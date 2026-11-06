@@ -1,0 +1,43 @@
+
+DESAFIO 08-drenagem | 2026-11-06_14-27-06
+No do banco preservado: ip-192-168-21-149.ec2.internal; no para manutencao: ip-192-168-21-66.ec2.internal
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl drain ip-192-168-21-66.ec2.internal --ignore-daemonsets --delete-emptydir-data --timeout=300s
+node/ip-192-168-21-66.ec2.internal cordoned
+evicting pod traefik/traefik-7f47bbd97c-7dcqb
+evicting pod kube-system/coredns-6449d55b5c-8f9mv
+evicting pod argocd/argocd-application-controller-0
+evicting pod argocd/argocd-applicationset-controller-5b46dffcbc-lqnk4
+evicting pod argocd/argocd-server-9d47c9989-rfghn
+evicting pod keda/keda-admission-webhooks-78fb47bd97-7cpqm
+evicting pod kube-system/ebs-csi-controller-77b664cfb5-shwd9
+evicting pod kube-system/coredns-6449d55b5c-c8fwt
+evicting pod kube-system/ebs-csi-controller-77b664cfb5-pmblz
+evicting pod store-prod/store-api-c57bbfdc5-6m5x7
+evicting pod store-prod/store-front-55b48c55c5-lzddh
+pod/traefik-7f47bbd97c-7dcqb evicted
+pod/keda-admission-webhooks-78fb47bd97-7cpqm evicted
+pod/argocd-applicationset-controller-5b46dffcbc-lqnk4 evicted
+pod/argocd-application-controller-0 evicted
+pod/argocd-server-9d47c9989-rfghn evicted
+pod/ebs-csi-controller-77b664cfb5-shwd9 evicted
+pod/store-api-c57bbfdc5-6m5x7 evicted
+pod/store-front-55b48c55c5-lzddh evicted
+evicting pod kube-system/coredns-6449d55b5c-c8fwt
+evicting pod kube-system/ebs-csi-controller-77b664cfb5-pmblz
+pod/coredns-6449d55b5c-8f9mv evicted
+evicting pod kube-system/coredns-6449d55b5c-c8fwt
+evicting pod kube-system/ebs-csi-controller-77b664cfb5-pmblz
+evicting pod kube-system/ebs-csi-controller-77b664cfb5-pmblz
+pod/ebs-csi-controller-77b664cfb5-pmblz evicted
+pod/coredns-6449d55b5c-c8fwt evicted
+node/ip-192-168-21-66.ec2.internal drained
+Warning: ignoring DaemonSet-managed Pods: kube-system/aws-node-899f2, kube-system/ebs-csi-node-vtfqn, kube-system/kube-proxy-sn2s9, store-observability/store-node-metrics-vn57n
+error when evicting pods/"ebs-csi-controller-77b664cfb5-pmblz" -n "kube-system" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+error when evicting pods/"coredns-6449d55b5c-c8fwt" -n "kube-system" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+I1106 14:29:45.669904   25640 request.go:752] "Waited before sending request" delay="1.060676834s" reason="client-side throttling, not priority and fairness" verb="GET" URL="https://6548BD3BFC027A91065FF036721918F6.gr7.us-east-1.eks.amazonaws.com/api/v1/namespaces/store-prod/pods/store-api-c57bbfdc5-6m5x7"
+error when evicting pods/"coredns-6449d55b5c-c8fwt" -n "kube-system" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+error when evicting pods/"ebs-csi-controller-77b664cfb5-pmblz" -n "kube-system" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+error when evicting pods/"ebs-csi-controller-77b664cfb5-pmblz" -n "kube-system" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+OK: drenagem respeitou os PDBs e a API responde.
+$ /Users/ronaldoattamah/Documents/Codex/2026-11-05/me-ajude-a-fazer-a-atividade/outputs/fiap-store/.runtime/bin/kubectl uncordon ip-192-168-21-66.ec2.internal
+node/ip-192-168-21-66.ec2.internal uncordoned

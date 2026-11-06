@@ -1,0 +1,24 @@
+NAME                             STATUS   ROLES    AGE   VERSION               ZONE
+ip-192-168-21-149.ec2.internal   Ready    <none>   21m   v1.35.9-eks-6e7947a   us-east-1a
+ip-192-168-21-66.ec2.internal    Ready    <none>   21m   v1.35.9-eks-6e7947a   us-east-1a
+ip-192-168-61-86.ec2.internal    Ready    <none>   21m   v1.35.9-eks-6e7947a   us-east-1b
+ip-192-168-86-96.ec2.internal    Ready    <none>   21m   v1.35.9-eks-6e7947a   us-east-1c
+NAME         SYNC STATUS   HEALTH STATUS
+fiap-store   Synced        Healthy
+NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/store-api      3/3     3            3           17h
+deployment.apps/store-front    2/2     2            2           17h
+deployment.apps/store-worker   0/0     0            0           17h
+
+NAME                                                        REFERENCE                 TARGETS             MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/keda-hpa-store-worker   Deployment/store-worker   <unknown>/5 (avg)   1         5         0          17h
+horizontalpodautoscaler.autoscaling/store-api               Deployment/store-api      cpu: 14%/60%        3         6         3          17h
+
+NAME                                SCALETARGETKIND      SCALETARGETNAME   MIN   MAX   READY   ACTIVE   FALLBACK   PAUSED   TRIGGERS   AUTHENTICATIONS   AGE
+scaledobject.keda.sh/store-worker   apps/v1.Deployment   store-worker      0     5     True    False    False      False    redis                        17h
+NAME                               READY   STATUS    RESTARTS   AGE
+pod/store-db-0                     1/1     Running   0          17m
+pod/store-redis-5654c56b9c-p7j46   1/1     Running   0          14h
+
+NAME                                    STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/data-store-db-0   Bound    pvc-e4d8d65c-23ae-4183-93d5-022f0001b327   4Gi        RWO            store-ebs      <unset>                 17h

@@ -9,7 +9,7 @@ Plataforma Amazon EKS para a aplicação do professor Fabio Bara. Código funcio
 
 ## Estado da entrega
 
-Cluster fiap-store criado em 05/11/2026 na conta Academy: quatro nós Ready em três zonas, Kubernetes 1.35, EBS CSI ativo, Metrics Server com leituras e VPC CNI com NetworkPolicy habilitada. Imagens ECR publicadas: API 1.0/2.0, worker 1.0 e front 1.1, todas linux/amd64 com usuários não root. Traefik, KEDA e Argo CD instalados; namespaces da aplicação criados. Aplicação implantada por Argo CD com estado Synced/Healthy; página e catálogo responderam HTTP 200 por HTTPS. Rollout real da API 1.0 → 2.0 concluído por commit; avaliação automática em 05/11/2026: 80/80. Scans Trivy produzidos: zero CRITICAL nas quatro imagens atuais; permanecem HIGH na API e no worker. Front 1.1 corrige quatro ocorrências CRITICAL da imagem 1.0. Desafios ao vivo e capturas finais continuam pendentes. Os relatórios Trivy serão produzidos com imagens reais. Não são fornecidos resultados fictícios. Atualize este parágrafo após o ensaio e registre as pendências reais.
+Cluster fiap-store criado em 05/11/2026 na conta Academy: quatro nós Ready em três zonas, Kubernetes 1.35, EBS CSI ativo, Metrics Server com leituras e VPC CNI com NetworkPolicy habilitada. Imagens ECR publicadas: API 1.0/2.0, worker 1.0 e front 1.1, todas linux/amd64 com usuários não root. Traefik, KEDA e Argo CD instalados; namespaces da aplicação criados. Aplicação implantada por Argo CD com estado Synced/Healthy; página e catálogo responderam HTTP 200 por HTTPS. Rollout real da API 1.0 → 2.0 concluído por commit; avaliação automática em 05/11/2026: 80/80. Scans Trivy produzidos: zero CRITICAL nas quatro imagens atuais; permanecem HIGH na API e no worker. Front 1.1 corrige quatro ocorrências CRITICAL da imagem 1.0. Em 06/11/2026, os dez desafios foram ensaiados com sucesso e a avaliação confirmou novamente 80/80. Relatório com seis prints reais e roteiro de gravação estão em docs/entrega-final/. A gravação do vídeo e a apresentação pelo grupo permanecem a cargo dos integrantes. Os relatórios Trivy serão produzidos com imagens reais. Não são fornecidos resultados fictícios. Atualize este parágrafo após o ensaio e registre as pendências reais.
 
 ## Arquitetura e decisões
 
@@ -138,3 +138,9 @@ O script remove Application primeiro, namespaces e PVC depois, espera o PV do st
 ## Uso de IA
 
 OpenAI Codex foi utilizado para leitura do enunciado e contrato dos serviços, elaboração dos manifestos, scripts e documentação. Os integrantes devem revisar e conseguir explicar cada recurso. Validações locais não substituem execução e demonstração no EKS.
+
+## Ensaio e gravação
+
+O roteiro em `docs/entrega-final/Guia-de-gravacao.pdf` organiza a apresentação em 20 minutos. O relatório em `docs/entrega-final/Relatorio-arquitetura-e-evidencias.pdf` contém arquitetura, seis capturas reais e resultados. Evidências do ensaio de 06/11/2026 estão em `evidencias/ensaio-2026-11-06_14-27-06/`. Para repetir os dez testes controlados antes de outra sessão, use `python3 scripts/08-ensaiar.py`: ele cria pedidos de teste, recria Pods, drena um nó sem banco e faz rollback por Git, restaurando API 2.0 e o nó ao final.
+
+Na retomada deste lab, os objetos e o PVC permaneceram, mas `nodeadm-config` havia falhado enquanto a sessão estava encerrada. Os serviços `nodeadm-config` e `nodeadm-run` foram retomados via AWS Systems Manager nas quatro instâncias; não foi necessário excluir o cluster ou o volume. Antes de outra gravação, renove as credenciais e confira que os quatro nós estão Ready e o Argo CD está Synced/Healthy.

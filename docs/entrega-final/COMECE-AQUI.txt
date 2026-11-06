@@ -1,0 +1,14 @@
+FIAP STORE — ENTREGA E GRAVACAO
+
+1. Leia Guia-de-gravacao.pdf e siga a sequencia de 20 minutos.
+2. Use Relatorio-arquitetura-e-evidencias.pdf como documento da arquitetura.
+3. Os DOCX sao as versoes editaveis; prints/ contem seis capturas reais e figuras/ contem o diagrama.
+4. O video ainda deve ser gravado por voce. Mantenha o lab ativo e nao mostre credenciais ou valores de Secrets.
+
+Validado em 06/11/2026: dez desafios OK e avaliacao automatica 80/80.
+O worker processou 50 pedidos e fez o ciclo 0 → 5 → 0. A API foi restaurada para 2.0.
+
+Repositorio: https://github.com/MaduKa01/fiap-store
+Loja: https://a6bd9332a749d4756ba3d7e0da6a7b5b-2090545040.us-east-1.elb.amazonaws.com/
+
+Antes da entrega, confira os demais integrantes no README e a orientacao do professor para o video. O enunciado recebido exige demonstracao ao vivo.

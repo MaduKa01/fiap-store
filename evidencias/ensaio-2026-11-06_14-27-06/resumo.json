@@ -1,0 +1,42 @@
+[
+  {
+    "desafio": "01-self-healing",
+    "resultado": "OK"
+  },
+  {
+    "desafio": "02-keda",
+    "resultado": "OK"
+  },
+  {
+    "desafio": "03-relatorio",
+    "resultado": "OK"
+  },
+  {
+    "desafio": "04-rbac",
+    "resultado": "OK"
+  },
+  {
+    "desafio": "05-rede",
+    "resultado": "OK"
+  },
+  {
+    "desafio": "06-pod-security",
+    "resultado": "OK"
+  },
+  {
+    "desafio": "07-persistencia",
+    "resultado": "OK"
+  },
+  {
+    "desafio": "08-drenagem",
+    "resultado": "OK"
+  },
+  {
+    "desafio": "09-drift",
+    "resultado": "OK"
+  },
+  {
+    "desafio": "10-rollback",
+    "resultado": "OK"
+  }
+]
