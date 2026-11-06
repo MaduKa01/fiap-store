@@ -17,7 +17,7 @@ for ns in store-prod store-data; do
 done
 LB_HOST=$(kubectl -n traefik get svc traefik -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
 [[ -n "$LB_HOST" ]] || { echo 'LoadBalancer ainda sem hostname. Aguarde e repita.'; exit 1; }
-openssl req -x509 -nodes -newkey rsa:2048 -days 30 -keyout "$secret_dir/tls.key" -out "$secret_dir/tls.crt" -subj "/CN=$LB_HOST" -addext "subjectAltName=DNS:$LB_HOST" 2>/dev/null
+openssl req -x509 -nodes -newkey rsa:2048 -days 30 -keyout "$secret_dir/tls.key" -out "$secret_dir/tls.crt" -subj "/CN=fiap-store" -addext "subjectAltName=DNS:$LB_HOST" 2>/dev/null
 kubectl -n store-prod create secret tls store-tls --cert="$secret_dir/tls.crt" --key="$secret_dir/tls.key" --dry-run=client -o yaml | kubectl apply -f - >/dev/null
 printf 'Loja: https://%s\n' "$LB_HOST"
 echo 'Certificado autoassinado para o laboratorio. O navegador exige aceite manual ou confianca local.'
